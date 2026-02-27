@@ -32,5 +32,8 @@ public class LoginValidator {
         validateLogin("@testuser", "Test@1234", "Username starts with special character");
         validateLogin("test@user", "Test@1234", "Username contains invalid character");
         validateLogin("test user", "Test@1234", "Username contains a space");
+        validateLogin("TESTUSER", "Test@1234", "Username in all capitals");
+        validateLogin("TestUser", "Test@1234", "Username in mixed case");
+        validateLogin("testuser", "test@1234", "Password wrong case");
     }
 }
