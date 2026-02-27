@@ -1,41 +1,129 @@
-public class EmailValidatorTest {
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
-    static String validateEmail(String email, String scenarioName) {
+public class EmailValidatorTest {
+    private String validateEmail(String email) {
         if (email == null || email.isEmpty()) {
-            return "TEST FAILED: " + scenarioName + " - Email cannot be empty";
+            return "Email cannot be empty";
         }
         if (email.contains(" ")) {
-            return "TEST FAILED: " + scenarioName + " - Email cannot contain spaces";
+            return "Email cannot contain spaces";
         }
         long atCount = email.chars().filter(c -> c == '@').count();
         if (atCount != 1) {
-            return "TEST FAILED: " + scenarioName + " - Email must contain exactly one @ symbol";
+            return "Email must contain exactly one @ symbol";
         }
         if (email.contains("..")) {
-            return "TEST FAILED: " + scenarioName + " - Email cannot contain consecutive dots";
+            return "Email cannot contain consecutive dots";
         }
         if (email.matches("[a-zA-Z][a-zA-Z0-9._-]*@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}")) {
-            return "TEST PASSED: " + scenarioName;
+            return "EMAIL_VALID";
         }
-        return "TEST FAILED: " + scenarioName + " - Invalid email format";
+        return "Invalid email format";
     }
-    public static void main(String[] args) {
-        System.out.println(validateEmail("testuser@example.com", "Valid email"));
-        System.out.println(validateEmail("t@example.com", "Single character local part"));
-        System.out.println(validateEmail("test.user@example.org", "Valid .org email"));
-        System.out.println(validateEmail("test@example.co.uk", "Valid .co.uk email"));
-        System.out.println(validateEmail("@example.com", "Missing local part"));
-        System.out.println(validateEmail("testuser@.com", "Missing domain"));
-        System.out.println(validateEmail("testuser@example.", "Missing extension"));
-        System.out.println(validateEmail("testuser@example", "No dot before extension"));
-        System.out.println(validateEmail("1testuser@example.com", "Local part starts with number"));
-        System.out.println(validateEmail("@testuser@example.com", "Local part starts with special character"));
-        System.out.println(validateEmail("testuser@@example.com", "Two @ symbols"));
-        System.out.println(validateEmail("test user@example.com", "Space in local part"));
-        System.out.println(validateEmail("testuser@exam ple.com", "Space in domain"));
-        System.out.println(validateEmail("test..user@example.com", "Consecutive dots"));
-        System.out.println(validateEmail("", "Empty email"));
-        System.out.println(validateEmail("testuser@example.education", "Extension too long"));
-        System.out.println(validateEmail("test.user_name-123@example.com", "Valid email with dots underscores hyphens"));
+    @Test(groups = "happy_path")
+    public void validEmail() {
+        String result = validateEmail("testuser@example.com");
+        Assert.assertEquals(result, "EMAIL_VALID", "Valid email should pass");
+    }
+
+    @Test(groups = "happy_path")
+    public void singleCharacterLocalPart() {
+        String result = validateEmail("t@example.com");
+        Assert.assertEquals(result, "EMAIL_VALID", "Single character local part should pass");
+    }
+
+    @Test(groups = "happy_path")
+    public void validOrgEmail() {
+        String result = validateEmail("test.user@example.org");
+        Assert.assertEquals(result, "EMAIL_VALID", "Valid .org email should pass");
+    }
+
+    @Test(groups = "happy_path")
+    public void validCoUkEmail() {
+        String result = validateEmail("test@example.co.uk");
+        Assert.assertEquals(result, "EMAIL_VALID", "Valid .co.uk email should pass");
+    }
+
+    @Test(groups = "happy_path")
+    public void validEmailWithSpecialChars() {
+        String result = validateEmail("test.user_name-123@example.com");
+        Assert.assertEquals(result, "EMAIL_VALID", "Valid email with dots underscores hyphens should pass");
+    }
+
+    // ===== MISSING PARTS =====
+    @Test(groups = "missing_parts")
+    public void missingLocalPart() {
+        String result = validateEmail("@example.com");
+        Assert.assertEquals(result, "Invalid email format", "Missing local part should fail");
+    }
+
+    @Test(groups = "missing_parts")
+    public void missingDomain() {
+        String result = validateEmail("testuser@.com");
+        Assert.assertEquals(result, "Invalid email format", "Missing domain should fail");
+    }
+
+    @Test(groups = "missing_parts")
+    public void missingExtension() {
+        String result = validateEmail("testuser@example.");
+        Assert.assertEquals(result, "Invalid email format", "Missing extension should fail");
+    }
+
+    @Test(groups = "missing_parts")
+    public void noDotBeforeExtension() {
+        String result = validateEmail("testuser@example");
+        Assert.assertEquals(result, "Invalid email format", "No dot before extension should fail");
+    }
+
+    @Test(groups = "missing_parts")
+    public void emptyEmail() {
+        String result = validateEmail("");
+        Assert.assertEquals(result, "Email cannot be empty", "Empty email should fail");
+    }
+
+    // ===== INVALID START =====
+    @Test(groups = "invalid_start")
+    public void localPartStartsWithNumber() {
+        String result = validateEmail("1testuser@example.com");
+        Assert.assertEquals(result, "Invalid email format", "Local part starting with number should fail");
+    }
+
+    @Test(groups = "invalid_start")
+    public void localPartStartsWithSpecialCharacter() {
+        String result = validateEmail("@testuser@example.com");
+        Assert.assertEquals(result, "Email must contain exactly one @ symbol", "Local part starting with special char should fail");
+    }
+
+    // ===== INVALID FORMAT =====
+    @Test(groups = "invalid_format")
+    public void twoAtSymbols() {
+        String result = validateEmail("testuser@@example.com");
+        Assert.assertEquals(result, "Email must contain exactly one @ symbol", "Two @ symbols should fail");
+    }
+
+    @Test(groups = "invalid_format")
+    public void spaceInLocalPart() {
+        String result = validateEmail("test user@example.com");
+        Assert.assertEquals(result, "Email cannot contain spaces", "Space in local part should fail");
+    }
+
+    @Test(groups = "invalid_format")
+    public void spaceInDomain() {
+        String result = validateEmail("testuser@exam ple.com");
+        Assert.assertEquals(result, "Email cannot contain spaces", "Space in domain should fail");
+    }
+
+    @Test(groups = "invalid_format")
+    public void consecutiveDots() {
+        String result = validateEmail("test..user@example.com");
+        Assert.assertEquals(result, "Email cannot contain consecutive dots", "Consecutive dots should fail");
+    }
+
+    // ===== INVALID EXTENSION =====
+    @Test(groups = "invalid_extension")
+    public void extensionTooLong() {
+        String result = validateEmail("testuser@example.education");
+        Assert.assertEquals(result, "Invalid email format", "Extension too long should fail");
     }
 }

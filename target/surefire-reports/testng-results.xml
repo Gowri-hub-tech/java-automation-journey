@@ -1,152 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="25" passed="25" failed="0" skipped="0">
+<testng-results ignored="0" total="42" passed="42" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-27T17:24:53 UTC" name="Surefire suite" finished-at="2026-02-27T17:24:53 UTC" duration-ms="106">
+  <suite started-at="2026-02-27T17:51:23 UTC" name="Surefire suite" finished-at="2026-02-27T17:51:23 UTC" duration-ms="124">
     <groups>
       <group name="security">
-        <method signature="LoginValidatorTest.sqlInjectionAttempt()[pri:0, instance:LoginValidatorTest@1188e820]" name="sqlInjectionAttempt" class="LoginValidatorTest"/>
+        <method signature="LoginValidatorTest.sqlInjectionAttempt()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="sqlInjectionAttempt" class="LoginValidatorTest"/>
       </group> <!-- security -->
       <group name="empty_fields">
-        <method signature="LoginValidatorTest.bothEmpty()[pri:0, instance:LoginValidatorTest@1188e820]" name="bothEmpty" class="LoginValidatorTest"/>
-        <method signature="LoginValidatorTest.emptyPassword()[pri:0, instance:LoginValidatorTest@1188e820]" name="emptyPassword" class="LoginValidatorTest"/>
-        <method signature="LoginValidatorTest.emptyUsername()[pri:0, instance:LoginValidatorTest@1188e820]" name="emptyUsername" class="LoginValidatorTest"/>
+        <method signature="LoginValidatorTest.bothEmpty()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="bothEmpty" class="LoginValidatorTest"/>
+        <method signature="LoginValidatorTest.emptyPassword()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="emptyPassword" class="LoginValidatorTest"/>
+        <method signature="LoginValidatorTest.emptyUsername()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="emptyUsername" class="LoginValidatorTest"/>
       </group> <!-- empty_fields -->
       <group name="special_characters">
-        <method signature="LoginValidatorTest.usernameContainsInvalidCharacter()[pri:0, instance:LoginValidatorTest@1188e820]" name="usernameContainsInvalidCharacter" class="LoginValidatorTest"/>
-        <method signature="LoginValidatorTest.usernameContainsSpace()[pri:0, instance:LoginValidatorTest@1188e820]" name="usernameContainsSpace" class="LoginValidatorTest"/>
-        <method signature="LoginValidatorTest.usernameStartsWithSpecialCharacter()[pri:0, instance:LoginValidatorTest@1188e820]" name="usernameStartsWithSpecialCharacter" class="LoginValidatorTest"/>
-        <method signature="PasswordValidatorTest.passwordStartsWithSpecialCharacter()[pri:0, instance:PasswordValidatorTest@3d8314f0]" name="passwordStartsWithSpecialCharacter" class="PasswordValidatorTest"/>
+        <method signature="LoginValidatorTest.usernameContainsInvalidCharacter()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="usernameContainsInvalidCharacter" class="LoginValidatorTest"/>
+        <method signature="LoginValidatorTest.usernameContainsSpace()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="usernameContainsSpace" class="LoginValidatorTest"/>
+        <method signature="LoginValidatorTest.usernameStartsWithSpecialCharacter()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="usernameStartsWithSpecialCharacter" class="LoginValidatorTest"/>
+        <method signature="PasswordValidatorTest.passwordStartsWithSpecialCharacter()[pri:0, instance:PasswordValidatorTest@588df31b]" name="passwordStartsWithSpecialCharacter" class="PasswordValidatorTest"/>
       </group> <!-- special_characters -->
+      <group name="invalid_extension">
+        <method signature="EmailValidatorTest.extensionTooLong()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="extensionTooLong" class="EmailValidatorTest"/>
+      </group> <!-- invalid_extension -->
       <group name="length_validation">
-        <method signature="LoginValidatorTest.passwordTooShort()[pri:0, instance:LoginValidatorTest@1188e820]" name="passwordTooShort" class="LoginValidatorTest"/>
-        <method signature="LoginValidatorTest.usernameTooLong()[pri:0, instance:LoginValidatorTest@1188e820]" name="usernameTooLong" class="LoginValidatorTest"/>
-        <method signature="LoginValidatorTest.usernameTooShort()[pri:0, instance:LoginValidatorTest@1188e820]" name="usernameTooShort" class="LoginValidatorTest"/>
-        <method signature="PasswordValidatorTest.passwordAtMinimumLength()[pri:0, instance:PasswordValidatorTest@3d8314f0]" name="passwordAtMinimumLength" class="PasswordValidatorTest"/>
-        <method signature="PasswordValidatorTest.passwordTooLong()[pri:0, instance:PasswordValidatorTest@3d8314f0]" name="passwordTooLong" class="PasswordValidatorTest"/>
-        <method signature="PasswordValidatorTest.passwordTooShort()[pri:0, instance:PasswordValidatorTest@3d8314f0]" name="passwordTooShort" class="PasswordValidatorTest"/>
+        <method signature="LoginValidatorTest.passwordTooShort()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="passwordTooShort" class="LoginValidatorTest"/>
+        <method signature="LoginValidatorTest.usernameTooLong()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="usernameTooLong" class="LoginValidatorTest"/>
+        <method signature="LoginValidatorTest.usernameTooShort()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="usernameTooShort" class="LoginValidatorTest"/>
+        <method signature="PasswordValidatorTest.passwordAtMinimumLength()[pri:0, instance:PasswordValidatorTest@588df31b]" name="passwordAtMinimumLength" class="PasswordValidatorTest"/>
+        <method signature="PasswordValidatorTest.passwordTooLong()[pri:0, instance:PasswordValidatorTest@588df31b]" name="passwordTooLong" class="PasswordValidatorTest"/>
+        <method signature="PasswordValidatorTest.passwordTooShort()[pri:0, instance:PasswordValidatorTest@588df31b]" name="passwordTooShort" class="PasswordValidatorTest"/>
       </group> <!-- length_validation -->
+      <group name="invalid_start">
+        <method signature="EmailValidatorTest.localPartStartsWithNumber()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="localPartStartsWithNumber" class="EmailValidatorTest"/>
+        <method signature="EmailValidatorTest.localPartStartsWithSpecialCharacter()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="localPartStartsWithSpecialCharacter" class="EmailValidatorTest"/>
+      </group> <!-- invalid_start -->
       <group name="wrong_credentials">
-        <method signature="LoginValidatorTest.correctUsernameWrongPassword()[pri:0, instance:LoginValidatorTest@1188e820]" name="correctUsernameWrongPassword" class="LoginValidatorTest"/>
-        <method signature="LoginValidatorTest.wrongUsernameAndPassword()[pri:0, instance:LoginValidatorTest@1188e820]" name="wrongUsernameAndPassword" class="LoginValidatorTest"/>
-        <method signature="LoginValidatorTest.wrongUsernameCorrectPassword()[pri:0, instance:LoginValidatorTest@1188e820]" name="wrongUsernameCorrectPassword" class="LoginValidatorTest"/>
+        <method signature="LoginValidatorTest.correctUsernameWrongPassword()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="correctUsernameWrongPassword" class="LoginValidatorTest"/>
+        <method signature="LoginValidatorTest.wrongUsernameAndPassword()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="wrongUsernameAndPassword" class="LoginValidatorTest"/>
+        <method signature="LoginValidatorTest.wrongUsernameCorrectPassword()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="wrongUsernameCorrectPassword" class="LoginValidatorTest"/>
       </group> <!-- wrong_credentials -->
       <group name="complexity_validation">
-        <method signature="PasswordValidatorTest.noLowercaseLetter()[pri:0, instance:PasswordValidatorTest@3d8314f0]" name="noLowercaseLetter" class="PasswordValidatorTest"/>
-        <method signature="PasswordValidatorTest.noNumber()[pri:0, instance:PasswordValidatorTest@3d8314f0]" name="noNumber" class="PasswordValidatorTest"/>
-        <method signature="PasswordValidatorTest.noSpecialCharacter()[pri:0, instance:PasswordValidatorTest@3d8314f0]" name="noSpecialCharacter" class="PasswordValidatorTest"/>
-        <method signature="PasswordValidatorTest.noUppercaseLetter()[pri:0, instance:PasswordValidatorTest@3d8314f0]" name="noUppercaseLetter" class="PasswordValidatorTest"/>
+        <method signature="PasswordValidatorTest.noLowercaseLetter()[pri:0, instance:PasswordValidatorTest@588df31b]" name="noLowercaseLetter" class="PasswordValidatorTest"/>
+        <method signature="PasswordValidatorTest.noNumber()[pri:0, instance:PasswordValidatorTest@588df31b]" name="noNumber" class="PasswordValidatorTest"/>
+        <method signature="PasswordValidatorTest.noSpecialCharacter()[pri:0, instance:PasswordValidatorTest@588df31b]" name="noSpecialCharacter" class="PasswordValidatorTest"/>
+        <method signature="PasswordValidatorTest.noUppercaseLetter()[pri:0, instance:PasswordValidatorTest@588df31b]" name="noUppercaseLetter" class="PasswordValidatorTest"/>
       </group> <!-- complexity_validation -->
-      <group name="happy_path">
-        <method signature="LoginValidatorTest.validUsernameAndPassword()[pri:0, instance:LoginValidatorTest@1188e820]" name="validUsernameAndPassword" class="LoginValidatorTest"/>
-        <method signature="PasswordValidatorTest.validPassword()[pri:0, instance:PasswordValidatorTest@3d8314f0]" name="validPassword" class="PasswordValidatorTest"/>
-      </group> <!-- happy_path -->
+      <group name="missing_parts">
+        <method signature="EmailValidatorTest.emptyEmail()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="emptyEmail" class="EmailValidatorTest"/>
+        <method signature="EmailValidatorTest.missingDomain()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="missingDomain" class="EmailValidatorTest"/>
+        <method signature="EmailValidatorTest.missingExtension()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="missingExtension" class="EmailValidatorTest"/>
+        <method signature="EmailValidatorTest.missingLocalPart()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="missingLocalPart" class="EmailValidatorTest"/>
+        <method signature="EmailValidatorTest.noDotBeforeExtension()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="noDotBeforeExtension" class="EmailValidatorTest"/>
+      </group> <!-- missing_parts -->
+      <group name="invalid_format">
+        <method signature="EmailValidatorTest.consecutiveDots()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="consecutiveDots" class="EmailValidatorTest"/>
+        <method signature="EmailValidatorTest.spaceInDomain()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="spaceInDomain" class="EmailValidatorTest"/>
+        <method signature="EmailValidatorTest.spaceInLocalPart()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="spaceInLocalPart" class="EmailValidatorTest"/>
+        <method signature="EmailValidatorTest.twoAtSymbols()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="twoAtSymbols" class="EmailValidatorTest"/>
+      </group> <!-- invalid_format -->
       <group name="case_sensitivity">
-        <method signature="LoginValidatorTest.usernameInAllCaps()[pri:0, instance:LoginValidatorTest@1188e820]" name="usernameInAllCaps" class="LoginValidatorTest"/>
-        <method signature="LoginValidatorTest.usernameInMixedCase()[pri:0, instance:LoginValidatorTest@1188e820]" name="usernameInMixedCase" class="LoginValidatorTest"/>
+        <method signature="LoginValidatorTest.usernameInAllCaps()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="usernameInAllCaps" class="LoginValidatorTest"/>
+        <method signature="LoginValidatorTest.usernameInMixedCase()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="usernameInMixedCase" class="LoginValidatorTest"/>
       </group> <!-- case_sensitivity -->
+      <group name="happy_path">
+        <method signature="EmailValidatorTest.singleCharacterLocalPart()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="singleCharacterLocalPart" class="EmailValidatorTest"/>
+        <method signature="EmailValidatorTest.validCoUkEmail()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="validCoUkEmail" class="EmailValidatorTest"/>
+        <method signature="EmailValidatorTest.validEmail()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="validEmail" class="EmailValidatorTest"/>
+        <method signature="EmailValidatorTest.validEmailWithSpecialChars()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="validEmailWithSpecialChars" class="EmailValidatorTest"/>
+        <method signature="EmailValidatorTest.validOrgEmail()[pri:0, instance:EmailValidatorTest@1ee807c6]" name="validOrgEmail" class="EmailValidatorTest"/>
+        <method signature="LoginValidatorTest.validUsernameAndPassword()[pri:0, instance:LoginValidatorTest@76a4d6c]" name="validUsernameAndPassword" class="LoginValidatorTest"/>
+        <method signature="PasswordValidatorTest.validPassword()[pri:0, instance:PasswordValidatorTest@588df31b]" name="validPassword" class="PasswordValidatorTest"/>
+      </group> <!-- happy_path -->
     </groups>
-    <test started-at="2026-02-27T17:24:53 UTC" name="Surefire test" finished-at="2026-02-27T17:24:53 UTC" duration-ms="106">
+    <test started-at="2026-02-27T17:51:23 UTC" name="Surefire test" finished-at="2026-02-27T17:51:23 UTC" duration-ms="124">
       <class name="LoginValidatorTest">
-        <test-method signature="bothEmpty()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="bothEmpty" finished-at="2026-02-27T17:24:53 UTC" duration-ms="1" status="PASS">
+        <test-method signature="bothEmpty()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="bothEmpty" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bothEmpty -->
-        <test-method signature="correctUsernameWrongPassword()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="correctUsernameWrongPassword" finished-at="2026-02-27T17:24:53 UTC" duration-ms="1" status="PASS">
+        <test-method signature="correctUsernameWrongPassword()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="correctUsernameWrongPassword" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- correctUsernameWrongPassword -->
-        <test-method signature="emptyPassword()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="emptyPassword" finished-at="2026-02-27T17:24:53 UTC" duration-ms="1" status="PASS">
+        <test-method signature="emptyPassword()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="emptyPassword" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- emptyPassword -->
-        <test-method signature="emptyUsername()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="emptyUsername" finished-at="2026-02-27T17:24:53 UTC" duration-ms="0" status="PASS">
+        <test-method signature="emptyUsername()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="emptyUsername" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- emptyUsername -->
-        <test-method signature="passwordTooShort()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="passwordTooShort" finished-at="2026-02-27T17:24:53 UTC" duration-ms="1" status="PASS">
+        <test-method signature="passwordTooShort()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="passwordTooShort" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passwordTooShort -->
-        <test-method signature="usernameContainsInvalidCharacter()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="usernameContainsInvalidCharacter" finished-at="2026-02-27T17:24:53 UTC" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- usernameContainsInvalidCharacter -->
-        <test-method signature="sqlInjectionAttempt()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="sqlInjectionAttempt" finished-at="2026-02-27T17:24:53 UTC" duration-ms="0" status="PASS">
+        <test-method signature="sqlInjectionAttempt()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="sqlInjectionAttempt" finished-at="2026-02-27T17:51:23 UTC" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sqlInjectionAttempt -->
-        <test-method signature="usernameContainsSpace()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="usernameContainsSpace" finished-at="2026-02-27T17:24:53 UTC" duration-ms="1" status="PASS">
+        <test-method signature="usernameContainsInvalidCharacter()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="usernameContainsInvalidCharacter" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usernameContainsInvalidCharacter -->
+        <test-method signature="usernameContainsSpace()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="usernameContainsSpace" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- usernameContainsSpace -->
-        <test-method signature="usernameInAllCaps()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="usernameInAllCaps" finished-at="2026-02-27T17:24:53 UTC" duration-ms="1" status="PASS">
+        <test-method signature="usernameInAllCaps()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="usernameInAllCaps" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- usernameInAllCaps -->
-        <test-method signature="usernameInMixedCase()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="usernameInMixedCase" finished-at="2026-02-27T17:24:53 UTC" duration-ms="0" status="PASS">
+        <test-method signature="usernameInMixedCase()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="usernameInMixedCase" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- usernameInMixedCase -->
-        <test-method signature="usernameStartsWithSpecialCharacter()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="usernameStartsWithSpecialCharacter" finished-at="2026-02-27T17:24:53 UTC" duration-ms="0" status="PASS">
+        <test-method signature="usernameStartsWithSpecialCharacter()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="usernameStartsWithSpecialCharacter" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- usernameStartsWithSpecialCharacter -->
-        <test-method signature="usernameTooLong()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="usernameTooLong" finished-at="2026-02-27T17:24:53 UTC" duration-ms="0" status="PASS">
+        <test-method signature="usernameTooLong()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="usernameTooLong" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- usernameTooLong -->
-        <test-method signature="usernameTooShort()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="usernameTooShort" finished-at="2026-02-27T17:24:53 UTC" duration-ms="1" status="PASS">
+        <test-method signature="usernameTooShort()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="usernameTooShort" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- usernameTooShort -->
-        <test-method signature="validUsernameAndPassword()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="validUsernameAndPassword" finished-at="2026-02-27T17:24:53 UTC" duration-ms="0" status="PASS">
+        <test-method signature="validUsernameAndPassword()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="validUsernameAndPassword" finished-at="2026-02-27T17:51:23 UTC" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validUsernameAndPassword -->
-        <test-method signature="wrongUsernameAndPassword()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="wrongUsernameAndPassword" finished-at="2026-02-27T17:24:53 UTC" duration-ms="2" status="PASS">
+        <test-method signature="wrongUsernameAndPassword()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="wrongUsernameAndPassword" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- wrongUsernameAndPassword -->
-        <test-method signature="wrongUsernameCorrectPassword()[pri:0, instance:LoginValidatorTest@1188e820]" started-at="2026-02-27T17:24:53 UTC" name="wrongUsernameCorrectPassword" finished-at="2026-02-27T17:24:53 UTC" duration-ms="0" status="PASS">
+        <test-method signature="wrongUsernameCorrectPassword()[pri:0, instance:LoginValidatorTest@76a4d6c]" started-at="2026-02-27T17:51:23 UTC" name="wrongUsernameCorrectPassword" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- wrongUsernameCorrectPassword -->
       </class> <!-- LoginValidatorTest -->
+      <class name="EmailValidatorTest">
+        <test-method signature="consecutiveDots()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="consecutiveDots" finished-at="2026-02-27T17:51:23 UTC" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- consecutiveDots -->
+        <test-method signature="emptyEmail()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="emptyEmail" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyEmail -->
+        <test-method signature="extensionTooLong()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="extensionTooLong" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extensionTooLong -->
+        <test-method signature="localPartStartsWithNumber()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="localPartStartsWithNumber" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- localPartStartsWithNumber -->
+        <test-method signature="localPartStartsWithSpecialCharacter()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="localPartStartsWithSpecialCharacter" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- localPartStartsWithSpecialCharacter -->
+        <test-method signature="missingDomain()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="missingDomain" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- missingDomain -->
+        <test-method signature="missingExtension()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="missingExtension" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- missingExtension -->
+        <test-method signature="missingLocalPart()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="missingLocalPart" finished-at="2026-02-27T17:51:23 UTC" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- missingLocalPart -->
+        <test-method signature="noDotBeforeExtension()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="noDotBeforeExtension" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noDotBeforeExtension -->
+        <test-method signature="singleCharacterLocalPart()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="singleCharacterLocalPart" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- singleCharacterLocalPart -->
+        <test-method signature="spaceInDomain()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="spaceInDomain" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- spaceInDomain -->
+        <test-method signature="spaceInLocalPart()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="spaceInLocalPart" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- spaceInLocalPart -->
+        <test-method signature="twoAtSymbols()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="twoAtSymbols" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- twoAtSymbols -->
+        <test-method signature="validCoUkEmail()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="validCoUkEmail" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validCoUkEmail -->
+        <test-method signature="validEmail()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="validEmail" finished-at="2026-02-27T17:51:23 UTC" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validEmail -->
+        <test-method signature="validEmailWithSpecialChars()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="validEmailWithSpecialChars" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validEmailWithSpecialChars -->
+        <test-method signature="validOrgEmail()[pri:0, instance:EmailValidatorTest@1ee807c6]" started-at="2026-02-27T17:51:23 UTC" name="validOrgEmail" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validOrgEmail -->
+      </class> <!-- EmailValidatorTest -->
       <class name="PasswordValidatorTest">
-        <test-method signature="noLowercaseLetter()[pri:0, instance:PasswordValidatorTest@3d8314f0]" started-at="2026-02-27T17:24:53 UTC" name="noLowercaseLetter" finished-at="2026-02-27T17:24:53 UTC" duration-ms="8" status="PASS">
+        <test-method signature="noLowercaseLetter()[pri:0, instance:PasswordValidatorTest@588df31b]" started-at="2026-02-27T17:51:23 UTC" name="noLowercaseLetter" finished-at="2026-02-27T17:51:23 UTC" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noLowercaseLetter -->
-        <test-method signature="noNumber()[pri:0, instance:PasswordValidatorTest@3d8314f0]" started-at="2026-02-27T17:24:53 UTC" name="noNumber" finished-at="2026-02-27T17:24:53 UTC" duration-ms="0" status="PASS">
+        <test-method signature="noNumber()[pri:0, instance:PasswordValidatorTest@588df31b]" started-at="2026-02-27T17:51:23 UTC" name="noNumber" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noNumber -->
-        <test-method signature="noSpecialCharacter()[pri:0, instance:PasswordValidatorTest@3d8314f0]" started-at="2026-02-27T17:24:53 UTC" name="noSpecialCharacter" finished-at="2026-02-27T17:24:53 UTC" duration-ms="1" status="PASS">
+        <test-method signature="noSpecialCharacter()[pri:0, instance:PasswordValidatorTest@588df31b]" started-at="2026-02-27T17:51:23 UTC" name="noSpecialCharacter" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noSpecialCharacter -->
-        <test-method signature="noUppercaseLetter()[pri:0, instance:PasswordValidatorTest@3d8314f0]" started-at="2026-02-27T17:24:53 UTC" name="noUppercaseLetter" finished-at="2026-02-27T17:24:53 UTC" duration-ms="1" status="PASS">
+        <test-method signature="noUppercaseLetter()[pri:0, instance:PasswordValidatorTest@588df31b]" started-at="2026-02-27T17:51:23 UTC" name="noUppercaseLetter" finished-at="2026-02-27T17:51:23 UTC" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noUppercaseLetter -->
-        <test-method signature="passwordAtMinimumLength()[pri:0, instance:PasswordValidatorTest@3d8314f0]" started-at="2026-02-27T17:24:53 UTC" name="passwordAtMinimumLength" finished-at="2026-02-27T17:24:53 UTC" duration-ms="0" status="PASS">
+        <test-method signature="passwordAtMinimumLength()[pri:0, instance:PasswordValidatorTest@588df31b]" started-at="2026-02-27T17:51:23 UTC" name="passwordAtMinimumLength" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passwordAtMinimumLength -->
-        <test-method signature="passwordStartsWithSpecialCharacter()[pri:0, instance:PasswordValidatorTest@3d8314f0]" started-at="2026-02-27T17:24:53 UTC" name="passwordStartsWithSpecialCharacter" finished-at="2026-02-27T17:24:53 UTC" duration-ms="0" status="PASS">
+        <test-method signature="passwordStartsWithSpecialCharacter()[pri:0, instance:PasswordValidatorTest@588df31b]" started-at="2026-02-27T17:51:23 UTC" name="passwordStartsWithSpecialCharacter" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passwordStartsWithSpecialCharacter -->
-        <test-method signature="passwordTooLong()[pri:0, instance:PasswordValidatorTest@3d8314f0]" started-at="2026-02-27T17:24:53 UTC" name="passwordTooLong" finished-at="2026-02-27T17:24:53 UTC" duration-ms="0" status="PASS">
+        <test-method signature="passwordTooLong()[pri:0, instance:PasswordValidatorTest@588df31b]" started-at="2026-02-27T17:51:23 UTC" name="passwordTooLong" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passwordTooLong -->
-        <test-method signature="passwordTooShort()[pri:0, instance:PasswordValidatorTest@3d8314f0]" started-at="2026-02-27T17:24:53 UTC" name="passwordTooShort" finished-at="2026-02-27T17:24:53 UTC" duration-ms="1" status="PASS">
+        <test-method signature="passwordTooShort()[pri:0, instance:PasswordValidatorTest@588df31b]" started-at="2026-02-27T17:51:23 UTC" name="passwordTooShort" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passwordTooShort -->
-        <test-method signature="validPassword()[pri:0, instance:PasswordValidatorTest@3d8314f0]" started-at="2026-02-27T17:24:53 UTC" name="validPassword" finished-at="2026-02-27T17:24:53 UTC" duration-ms="0" status="PASS">
+        <test-method signature="validPassword()[pri:0, instance:PasswordValidatorTest@588df31b]" started-at="2026-02-27T17:51:23 UTC" name="validPassword" finished-at="2026-02-27T17:51:23 UTC" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validPassword -->

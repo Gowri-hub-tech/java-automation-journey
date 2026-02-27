@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="0.771" tests="25" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="0.983" tests="42" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="session.topDirectory" value="/workspaces/java-automation-journey"/>
     <property name="sun.boot.library.path" value="/usr/local/sdkman/candidates/java/25.0.1-ms/lib"/>
-    <property name="sun.java.command" value="/workspaces/java-automation-journey/target/surefire/surefirebooter-20260227172452845_3.jar /workspaces/java-automation-journey/target/surefire 2026-02-27T17-24-52_694-jvmRun1 surefire-20260227172452845_1tmp surefire_0-20260227172452845_2tmp"/>
+    <property name="sun.java.command" value="/workspaces/java-automation-journey/target/surefire/surefirebooter-20260227175121967_3.jar /workspaces/java-automation-journey/target/surefire 2026-02-27T17-51-21_778-jvmRun1 surefire-20260227175121967_1tmp surefire_0-20260227175121967_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/workspaces/java-automation-journey/target/test-classes:/workspaces/java-automation-journey/target/classes:/home/codespace/.m2/repository/org/testng/testng/7.8.0/testng-7.8.0.jar:/home/codespace/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/codespace/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/codespace/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/workspaces/java-automation-journey/target/surefire/surefirebooter-20260227172452845_3.jar"/>
+    <property name="surefire.real.class.path" value="/workspaces/java-automation-journey/target/surefire/surefirebooter-20260227175121967_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.1+8-LTS"/>
     <property name="user.name" value="codespace"/>
@@ -65,25 +65,42 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
   <testcase name="noNumber" classname="PasswordValidatorTest" time="0.0"/>
   <testcase name="noSpecialCharacter" classname="PasswordValidatorTest" time="0.0"/>
   <testcase name="noUppercaseLetter" classname="PasswordValidatorTest" time="0.0"/>
-  <testcase name="passwordAtMinimumLength" classname="PasswordValidatorTest" time="0.001"/>
+  <testcase name="passwordAtMinimumLength" classname="PasswordValidatorTest" time="0.0"/>
   <testcase name="passwordStartsWithSpecialCharacter" classname="PasswordValidatorTest" time="0.0"/>
   <testcase name="passwordTooLong" classname="PasswordValidatorTest" time="0.0"/>
   <testcase name="passwordTooShort" classname="PasswordValidatorTest" time="0.0"/>
-  <testcase name="validPassword" classname="PasswordValidatorTest" time="0.005"/>
-  <testcase name="bothEmpty" classname="LoginValidatorTest" time="0.005"/>
+  <testcase name="validPassword" classname="PasswordValidatorTest" time="0.0"/>
+  <testcase name="consecutiveDots" classname="EmailValidatorTest" time="0.003"/>
+  <testcase name="emptyEmail" classname="EmailValidatorTest" time="0.0"/>
+  <testcase name="extensionTooLong" classname="EmailValidatorTest" time="0.002"/>
+  <testcase name="localPartStartsWithNumber" classname="EmailValidatorTest" time="0.0"/>
+  <testcase name="localPartStartsWithSpecialCharacter" classname="EmailValidatorTest" time="0.0"/>
+  <testcase name="missingDomain" classname="EmailValidatorTest" time="0.004"/>
+  <testcase name="missingExtension" classname="EmailValidatorTest" time="0.0"/>
+  <testcase name="missingLocalPart" classname="EmailValidatorTest" time="0.0"/>
+  <testcase name="noDotBeforeExtension" classname="EmailValidatorTest" time="0.0"/>
+  <testcase name="singleCharacterLocalPart" classname="EmailValidatorTest" time="0.0"/>
+  <testcase name="spaceInDomain" classname="EmailValidatorTest" time="0.0"/>
+  <testcase name="spaceInLocalPart" classname="EmailValidatorTest" time="0.001"/>
+  <testcase name="twoAtSymbols" classname="EmailValidatorTest" time="0.0"/>
+  <testcase name="validCoUkEmail" classname="EmailValidatorTest" time="0.004"/>
+  <testcase name="validEmail" classname="EmailValidatorTest" time="0.0"/>
+  <testcase name="validEmailWithSpecialChars" classname="EmailValidatorTest" time="0.0"/>
+  <testcase name="validOrgEmail" classname="EmailValidatorTest" time="0.0"/>
+  <testcase name="bothEmpty" classname="LoginValidatorTest" time="0.0"/>
   <testcase name="correctUsernameWrongPassword" classname="LoginValidatorTest" time="0.0"/>
   <testcase name="emptyPassword" classname="LoginValidatorTest" time="0.0"/>
   <testcase name="emptyUsername" classname="LoginValidatorTest" time="0.0"/>
-  <testcase name="passwordTooShort" classname="LoginValidatorTest" time="0.006"/>
-  <testcase name="sqlInjectionAttempt" classname="LoginValidatorTest" time="0.0"/>
+  <testcase name="passwordTooShort" classname="LoginValidatorTest" time="0.0"/>
+  <testcase name="sqlInjectionAttempt" classname="LoginValidatorTest" time="0.003"/>
   <testcase name="usernameContainsInvalidCharacter" classname="LoginValidatorTest" time="0.0"/>
   <testcase name="usernameContainsSpace" classname="LoginValidatorTest" time="0.0"/>
   <testcase name="usernameInAllCaps" classname="LoginValidatorTest" time="0.0"/>
-  <testcase name="usernameInMixedCase" classname="LoginValidatorTest" time="0.0"/>
-  <testcase name="usernameStartsWithSpecialCharacter" classname="LoginValidatorTest" time="0.0"/>
+  <testcase name="usernameInMixedCase" classname="LoginValidatorTest" time="0.001"/>
+  <testcase name="usernameStartsWithSpecialCharacter" classname="LoginValidatorTest" time="0.004"/>
   <testcase name="usernameTooLong" classname="LoginValidatorTest" time="0.0"/>
   <testcase name="usernameTooShort" classname="LoginValidatorTest" time="0.0"/>
-  <testcase name="validUsernameAndPassword" classname="LoginValidatorTest" time="0.0"/>
-  <testcase name="wrongUsernameAndPassword" classname="LoginValidatorTest" time="0.0"/>
-  <testcase name="wrongUsernameCorrectPassword" classname="LoginValidatorTest" time="0.0"/>
+  <testcase name="validUsernameAndPassword" classname="LoginValidatorTest" time="0.003"/>
+  <testcase name="wrongUsernameAndPassword" classname="LoginValidatorTest" time="0.003"/>
+  <testcase name="wrongUsernameCorrectPassword" classname="LoginValidatorTest" time="0.002"/>
 </testsuite>
