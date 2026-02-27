@@ -35,5 +35,6 @@ public class LoginValidator {
         validateLogin("TESTUSER", "Test@1234", "Username in all capitals");
         validateLogin("TestUser", "Test@1234", "Username in mixed case");
         validateLogin("testuser", "test@1234", "Password wrong case");
+        validateLogin("' OR '1'='1", "Test@1234", "SQL injection attempt in username");
     }
 }
